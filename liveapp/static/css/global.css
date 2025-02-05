@@ -7,7 +7,7 @@
 }
 :root {
   --primary-color-red: #ca0000;
-  --primary-color-dark: #1b1b1b;
+  --primary-color-dark: #0D0D0D;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -35,12 +35,12 @@
 }
 .inner-navbar-wrapper {
   background-color: var(--primary-color-red);
-  width: 50%;
-  height: 45px;
+  width: 40%;
+  height: 40px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
 .navbar-skew {
-  transform: skewX(-65deg);
+  transform: skewX(-62deg);
   width: 40px;
   background-color: var(--primary-color-red);
   right: 20px;
