@@ -7,6 +7,7 @@
 }
 :root {
   --primary-color-red: #ca0000;
+  --primary-color-dark: #1b1b1b;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -27,7 +28,7 @@
 .navbar-wrapper {
   top: 20px;
   left: 0px;
-  z-index: 1000;
+  z-index: 10000;
   position: fixed;
   width: 100%;
   display: flex;
@@ -438,4 +439,100 @@
   padding-left: 10px;
   bottom: 0px;
   position: absolute;
+}
+.story-wrapper {
+  height: 100vh;
+  background-color: var(--primary-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.left-story-side {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30%;
+  height: 100%;
+}
+.left-story-side img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.divider-line {
+  height: 8px;
+  background-color: var(--primary-color-red);
+}
+.inner-story-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    #1b1b1b0e,
+    #141414,
+    #141414,
+    #141414,
+    #141414
+  );
+}
+.wrapper-story-inner {
+  width: 85%;
+}
+.inner-story-title h1 {
+  color: white;
+  font-size: x-large;
+}
+.story-content {
+  height: 700px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 20px;
+}
+.the-story-content {
+  margin-bottom: 2rem;
+}
+.the-actual-story-item {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.the-number-story {
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.the-number-story h1 {
+  color: white;
+  font-weight: 600;
+  /* background-color: var(--primary-color-red); */
+}
+.straight-line-story {
+  width: 15px;
+  height: 300px;
+  background-color: var(--primary-color-red);
+}
+.the-actual-story-item img {
+  border: 1px solid var(--primary-color-red);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.the-actual-story-item-content h1 {
+  font-size: larger;
+  color: white;
+}
+.the-actual-story-item-content p {
+  font-size: 0.95em;
+  color: white;
 }
