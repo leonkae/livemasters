@@ -1,9 +1,193 @@
-{% extends '../base/base.html' %}{% load static %}
+{% extends '../base/base.html' %}{% load static %} {% block landing %}
 
-{% block landing %}
-
-    <div class="landing-wrapper">
-
+<div class="landing-wrapper">
+  <div class="navbar-socket">{% include "../liveappTemp/navbar.html" %}</div>
+  <div class="carousel">
+    <div class="progress-bar progress-bar--primary hide-on-desktop">
+      <div class="progress-bar__fill"></div>
     </div>
+
+    <header class="main-post-wrapper">
+      <div class="slides">
+        <article class="main-post main-post--active">
+          <div class="main-post__image">
+            <img
+              src="{% static 'images/family-bank.jpeg' %}"
+              alt="New McLaren wind tunnel 'critical' to future performance, says Tech Director Key"
+              loading="lazy"
+            />
+          </div>
+          <div class="main-post__content">
+            <div class="main-post__tag-wrapper">
+              <span class="main-post__tag">Welcome to</span>
+            </div>
+            <h1 class="main-post__title">Live Masters</h1>
+            <h2 class="post__title">
+              LiveMasters is a bespoke communications company that specializes
+              in providing communications, events,and marketing solutions for
+              maximum impact storytelling across all touch- points. We pride
+              ourselves in being a conduit for producing effective and relevant
+              communication that is definitive and packaged for digital global
+              penetration.
+            </h2>
+            <div class="slice-line"></div>
+            <div class="services-hero">
+              <div class="box-1-services">
+                <img src="{% static 'images/redwire.jpeg' %}" alt="" />
+                <div class="box-1-services-content">
+                  <div class="inner-services-box">
+                    <h1>Live Streaming</h1>
+                    <div class="slice-line-x"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-1-services">
+                <img src="{% static 'images/video-coverage.jpeg' %}" alt="" />
+                <div class="box-1-services-content">
+                  <div class="inner-services-box">
+                    <h1>Video Coverage</h1>
+                    <div class="slice-line-x"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-1-services">
+                <img src="{% static 'images/polka.jpeg' %}" alt="" />
+                <div class="box-1-services-content">
+                  <div class="inner-services-box">
+                    <h1>Documentary/ Digital content production</h1>
+                    <div class="slice-line-x"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-1-services">
+                <img src="{% static 'images/pexels.jpg' %}" alt="" />
+                <div class="box-1-services-content">
+                  <div class="inner-services-box">
+                    <h1>Location Photography</h1>
+                    <div class="slice-line-x"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="main-post__link" href="#">
+              <span class="main-post__link-text">Lets Work</span>
+              <svg
+                class="main-post__link-icon main-post__link-icon--arrow"
+                width="37"
+                height="12"
+                viewBox="0 0 37 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 6H36.0001M36.0001 6L31.0001 1M36.0001 6L31.0001 11"
+                  stroke="white"
+                />
+              </svg>
+            </a>
+          </div>
+        </article>
+        <article class="main-post main-post--not-active">
+          <div class="main-post__image">
+            <img
+              src="{% static 'images/video-coverage.jpeg' %}"
+              alt="What To Watch For in the 2019 Hungarian Grand Prix"
+              loading="lazy"
+            />
+          </div>
+          <div class="main-post__content">
+            <div class="main-post__tag-wrapper">
+              <span class="main-post__tag">Corporate</span>
+            </div>
+            <h1 class="main-post__title">We host top-tier corporate events!</h1>
+            <a class="main-post__link" href="#">
+              <span class="main-post__link-text">Lets Work</span>
+              <svg
+                class="main-post__link-icon main-post__link-icon--arrow"
+                width="37"
+                height="12"
+                viewBox="0 0 37 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 6H36.0001M36.0001 6L31.0001 1M36.0001 6L31.0001 11"
+                  stroke="white"
+                />
+              </svg>
+            </a>
+          </div>
+        </article>
+        <article class="main-post main-post--not-active">
+          <div class="main-post__image">
+            <img
+              src="{% static 'images/redwire.jpeg' %}"
+              alt="Hamilton wants harder championship fight from Leclerc and
+              Verstappen"
+              loading="lazy"
+            />
+          </div>
+          <div class="main-post__content">
+            <div class="main-post__tag-wrapper">
+              <span class="main-post__tag">Live Events</span>
+            </div>
+            <h1 class="main-post__title">
+              Bringing your live events to life with excellence!
+            </h1>
+            <a class="main-post__link" href="#">
+              <span class="main-post__link-text">Lets Work</span>
+              <svg
+                class="main-post__link-icon main-post__link-icon--arrow"
+                width="37"
+                height="12"
+                viewBox="0 0 37 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 6H36.0001M36.0001 6L31.0001 1M36.0001 6L31.0001 11"
+                  stroke="white"
+                />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </header>
+
+    <div class="posts-wrapper hide-on-mobile">
+      <article class="post post--active">
+        <div class="progress-bar">
+          <div class="progress-bar__fill"></div>
+        </div>
+        <header class="post__header">
+          <span class="post__tag">LiveMasters</span>
+          <!-- <p class="post__published">16 August 2019</p> -->
+        </header>
+        <h2 class="post__title">Welcome to LiveMasters</h2>
+      </article>
+      <article class="post">
+        <div class="progress-bar">
+          <div class="progress-bar__fill"></div>
+        </div>
+        <header class="post__header">
+          <span class="post__tag">Corporate</span>
+          <!-- <p class="post__published">12 August 2019</p> -->
+        </header>
+        <h2 class="post__title">Corporate events.</h2>
+      </article>
+      <article class="post">
+        <div class="progress-bar">
+          <div class="progress-bar__fill"></div>
+        </div>
+        <header class="post__header">
+          <span class="post__tag">Live Event</span>
+          <!-- <p class="post__published">08 August 2019</p> -->
+        </header>
+        <h2 class="post__title">Our live events</h2>
+      </article>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
