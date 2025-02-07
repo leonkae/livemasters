@@ -177,6 +177,7 @@
             <div class="center-bolt">
               <div class="service-cards">
                 <div class="slider-reel">
+                  {% for post in posts %}
                   <div class="card-x">
                     <div class="card-x-inner">
                       <img
@@ -186,77 +187,37 @@
                       />
                       <div class="bottom-left-x">
                         <div class="title-line-experience">
-                          <h1>Kaizer Cheifs vs East London Fc</h1>
+                          <h1>{{post.title}}</h1>
                         </div>
                         <div class="experience-button">
                           <div class="acct-experience-button">
-                            <a href="">View</a>
+                            <a href="" id="openModal">View</a>
                           </div>
                           <div class="experience-button-skew"></div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="card-x">
-                    <div class="card-x-inner">
-                      <img
-                        loading="lazy"
-                        src="{% static 'images/redwire.jpeg' %}"
-                        alt=""
-                      />
-                      <div class="bottom-left-x">
-                        <div class="title-line-experience">
-                          <h1>Kaizer Cheifs vs East London Fc</h1>
+
+                  <div id="modal-x" class="modal-x">
+                    <div class="modal-x-content">
+                      <span class="close-modal">CLOSE</span>
+                      <div class="inner-modal-x">
+                        <div class="inner-modal-x-title">
+                          <h1>{{post.title}}</h1>
                         </div>
-                        <div class="experience-button">
-                          <div class="acct-experience-button">
-                            <a href="">View</a>
+                        <div class="model-modal-inner-content">
+                          <div class="inner-modal-x-image">
+                            <img src="{{post.image}}" alt="" />
                           </div>
-                          <div class="experience-button-skew"></div>
+                          <div class="inner-modal-x-caption">
+                            <p>{{post.content}}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="card-x">
-                    <div class="card-x-inner">
-                      <img
-                        loading="lazy"
-                        src="{% static 'images/family-bank.jpeg' %}"
-                        alt=""
-                      />
-                      <div class="bottom-left-x">
-                        <div class="title-line-experience">
-                          <h1>Kaizer Cheifs vs East London Fc</h1>
-                        </div>
-                        <div class="experience-button">
-                          <div class="acct-experience-button">
-                            <a href="">View</a>
-                          </div>
-                          <div class="experience-button-skew"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-x">
-                    <div class="card-x-inner">
-                      <img
-                        loading="lazy"
-                        src="{% static 'images/blue-men.jpeg' %}"
-                        alt=""
-                      />
-                      <div class="bottom-left-x">
-                        <div class="title-line-experience">
-                          <h1>Kaizer Cheifs vs East London Fc</h1>
-                        </div>
-                        <div class="experience-button">
-                          <div class="acct-experience-button">
-                            <a href="">View</a>
-                          </div>
-                          <div class="experience-button-skew"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
