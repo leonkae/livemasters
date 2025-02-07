@@ -759,26 +759,32 @@
   margin-bottom: 1rem;
 }
 .client-wrapper {
-  border: 3px solid red;
-  height: 100vh;
+  height: 70vh;
   background-color: var(--primary-color-dark);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .client-wrapper-inner {
-  border: 3px solid blue;
   width: 85%;
 }
 .client-item-wrapper {
-  border: 3px solid red;
   height: 200px;
+  background-color: #fff;
+  padding: 20px;
+}
+.client-item-wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 .client-wrapper-items {
   padding: 10px;
 }
 .footer-wrapper{
-  padding: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   background-color: #141414;
   display: flex;
   align-items: center;
