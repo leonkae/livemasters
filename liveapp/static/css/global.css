@@ -25,7 +25,6 @@
 .landing-wrapper {
   background-color: rgb(36, 36, 36);
 }
-
 .navbar-wrapper {
   top: 20px;
   left: 0px;
@@ -37,11 +36,11 @@
 .inner-navbar-wrapper {
   background-color: var(--primary-color-red);
   width: 40%;
-  height: 35px;
+  height: 38px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
 .navbar-skew {
-  transform: skewX(-66deg);
+  transform: skewX(-64deg);
   width: 30px;
   background-color: var(--primary-color-red);
 }
@@ -410,6 +409,11 @@
     max-width: 70%;
   }
 }
+.about-wrapper{
+  border: 3px solid #ff0000;
+  height: 100vh;
+  background-color: var(--primary-color-dark);
+}
 .services-hero {
   display: flex;
   margin-bottom: 1rem;
@@ -433,7 +437,6 @@
   width: 100%;
   background-color: #00000050;
 }
-
 .box-1-services-content h1 {
   font-size: 18px;
   font-weight: 600;
@@ -533,10 +536,11 @@
 }
 .the-number-story h1 {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: xx-large;
 }
 .straight-line-story {
-  width: 15px;
+  width: 10px;
   height: 300px;
   background-color: var(--primary-color-red);
 }
@@ -552,7 +556,7 @@
   color: white;
 }
 .the-actual-story-item-content p {
-  font-size: 0.95em;
+  font-size: 1.2em;
   color: white;
 }
 .experience-wrapper {
@@ -751,6 +755,7 @@
 }
 .inner-experience-caption p {
   color: white;
+  font-size: 1.2em;
   margin-bottom: 1rem;
 }
 .client-wrapper {
