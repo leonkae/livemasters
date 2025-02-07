@@ -777,3 +777,48 @@
 .client-wrapper-items {
   padding: 10px;
 }
+.footer-wrapper{
+  padding: 3%;
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-footer-wrapper{
+  width: 85%;
+}
+.footer-nav{
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  background-color: var(--primary-color-red);
+}
+.legal-info-x-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  
+}
+@media screen and (max-width: 1000px) {
+  .legal-info-x-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+  }
+}
+.legal-info-x-footer p {
+  color: rgba(255, 255, 255, 0.212);
+  font-size: smaller;
+  text-align: center;
+}
+.legal-info-x-footer a {
+  color: rgba(255, 255, 255, 0.212);
+}
+.legal-footer-line{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 1px;
+  background-color: var(--primary-color-red);
+}
