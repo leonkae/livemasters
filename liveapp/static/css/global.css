@@ -25,6 +25,7 @@
 .landing-wrapper {
   background-color: rgb(36, 36, 36);
 }
+
 .navbar-wrapper {
   top: 20px;
   left: 0px;
@@ -36,14 +37,13 @@
 .inner-navbar-wrapper {
   background-color: var(--primary-color-red);
   width: 40%;
-  height: 40px;
+  height: 35px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
 .navbar-skew {
-  transform: skewX(-62deg);
-  width: 40px;
+  transform: skewX(-66deg);
+  width: 30px;
   background-color: var(--primary-color-red);
-  right: 20px;
 }
 .slice-line {
   width: 20%;
@@ -188,7 +188,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 5px;
+  height: 3px;
   width: 100%;
 }
 .progress-bar__fill {
@@ -245,13 +245,22 @@
   background: rgba(14, 13, 14, 0.5);
 }
 .main-post__content {
+  /* border: 3px solid red; */
   position: absolute;
   top: 40%;
-  left: 4%;
+  left: 7.5%;
   transform: translateY(-40%);
   color: #fff;
-  width: 90%;
+  width: 100%;
 }
+/* .main-post__content_left {
+  border: 3px solid red;
+  position: absolute;
+  top: 40%;
+  right: 7.5%;
+  transform: translateY(-40%);
+  width: 30%;
+} */
 .main-post__tag-wrapper {
   margin-bottom: 1rem;
   display: inline-flex;
@@ -266,7 +275,7 @@
   font-weight: 700;
   font-size: 1.95em;
   line-height: 1.25;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); */
 }
 .main-post__link {
   text-decoration: none;
@@ -358,7 +367,7 @@
 }
 .post__title {
   font-weight: 400;
-  font-size: 0.95em;
+  font-size: 1.2em;
   line-height: 1.5;
 }
 .post--active {
@@ -424,9 +433,11 @@
   width: 100%;
   background-color: #00000050;
 }
+
 .box-1-services-content h1 {
-  font-size: large;
+  font-size: 18px;
   font-weight: 600;
+  color: #fff;
 }
 .slice-line-x {
   width: 100px;
@@ -436,10 +447,19 @@
   margin-bottom: 1rem;
 }
 .inner-services-box {
-  padding-left: 10px;
+  /* padding-left: 10px; */
   bottom: 0px;
   position: absolute;
+  /* border: 3px solid yellow; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  padding: 10px;
 }
+/* .inner-services-content{
+  border: 3px solid blue;
+} */
 .story-wrapper {
   height: 100vh;
   background-color: var(--primary-color-dark);
@@ -732,4 +752,23 @@
 .inner-experience-caption p {
   color: white;
   margin-bottom: 1rem;
+}
+.client-wrapper {
+  border: 3px solid red;
+  height: 100vh;
+  background-color: var(--primary-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-wrapper-inner {
+  border: 3px solid blue;
+  width: 85%;
+}
+.client-item-wrapper {
+  border: 3px solid red;
+  height: 200px;
+}
+.client-wrapper-items {
+  padding: 10px;
 }
