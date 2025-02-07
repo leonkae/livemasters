@@ -1,7 +1,7 @@
 {% extends "../base/base.html" %}{% load static %}{% block experience-two %}
 
 <div class="divider-line"></div>
-<div class="experience-wrapper" id="magazine" >
+<div class="experience-wrapper" id="magazine">
   <div class="overlay-experience-wrapper">
     <div class="inner-experience-wrapper">
       <div class="inner-story-title">
@@ -35,11 +35,141 @@
             </div>
             <div class="experience-button">
               <div class="acct-experience-button">
-                <a href="">View</a>
+                <a href="" id="openModal">View</a>
               </div>
               <div class="experience-button-skew"></div>
             </div>
           </div>
+
+          <div id="modal-x" class="modal-x">
+            <div class="modal-x-content">
+              <span class="close-modal">CLOSE</span>
+              <div class="inner-modal-x">
+                <div class="inner-modal-x-title">
+                  <h1>
+                    What it actually takes to pull <br />
+                    off a successful event
+                  </h1>
+                </div>
+                <div class="model-modal-inner-content">
+                  <div class="inner-modal-x-image">
+                    <img src="{% static 'images/blue-men.jpeg' %}" alt="" />
+                  </div>
+                  <div class="inner-modal-x-caption">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Hic atque est cum porro nostrum, quis saepe voluptas
+                      dolores numquam. Magnam fugiat eos aperiam ut nam, amet
+                      dolore velit accusantium culpa, consequatur eum, atque
+                      ratione recusandae quas quisquam quam facilis. Ipsum
+                      dolorem laboriosam itaque quasi. Cupiditate aliquam quos
+                      id quia hic, omnis esse eveniet nihil veritatis quod et
+                      minus ipsum. Vero, earum saepe debitis ex dolor quaerat
+                      necessitatibus blanditiis velit, eaque, fugiat vitae
+                      consequuntur? Quis hic libero laborum qui unde maxime
+                      corporis. Quam pariatur rerum maxime est debitis
+                      praesentium ullam repellat impedit ipsam soluta, iusto
+                      expedita quibusdam accusamus quae voluptas vel, doloribus
+                      ad? Iusto asperiores cumque ipsa quia enim quas magnam
+                      quibusdam ab voluptates, magni facilis, illum sint minus
+                      veniam temporibus distinctio dicta officiis placeat
+                      impedit? Officia quasi, dignissimos nostrum mollitia et
+                      pariatur sed, assumenda expedita molestias dolores nihil
+                      velit saepe quas dolore provident ipsam modi tenetur
+                      perferendis at voluptatibus blanditiis aliquam
+                      reprehenderit temporibus iste! Vitae praesentium
+                      recusandae sapiente tempora, commodi iure quas! Veritatis
+                      quisquam obcaecati iusto ratione quos mollitia fuga culpa
+                      ea. Eaque laboriosam, laudantium commodi quas est ut
+                      vitae? Iure aperiam ut optio libero architecto non earum
+                      numquam corrupti, odio sapiente beatae exercitationem
+                      suscipit dignissimos molestias cum alias ab laborum
+                      distinctio. Facilis quis ad nam accusantium molestias
+                      voluptas recusandae quos commodi harum similique
+                      praesentium illum ullam adipisci reprehenderit voluptatum
+                      asperiores minus minima molestiae eum esse, doloribus
+                      eligendi at voluptatibus ipsa. Est dolor eum rem, quam
+                      dolorum velit qui beatae cupiditate doloremque veritatis
+                      officiis aspernatur voluptatum provident totam alias
+                      soluta? Ducimus incidunt qui ullam illo cum aliquid rerum
+                      dolores porro nihil saepe, natus fugit laudantium minima
+                      quo beatae esse minus recusandae sit quasi? Consequatur
+                      inventore odit itaque mollitia nesciunt fugit eius? Beatae
+                      explicabo quae aut et ratione. A dicta ratione sequi quod
+                      laborum et labore explicabo voluptatem vitae odio at
+                      dolorem ut natus, nemo illum voluptate recusandae nisi aut
+                      sapiente. Ducimus labore nam dicta! Ratione repellat qui
+                      quaerat eligendi optio distinctio praesentium totam
+                      laudantium temporibus maxime dolore voluptatibus corporis
+                      provident enim delectus soluta sed exercitationem ex,
+                      impedit reprehenderit repellendus eveniet! Debitis,
+                      exercitationem dolore hic, culpa praesentium repellat
+                      fugiat odio neque assumenda totam repudiandae fuga autem!
+                      Ipsam reiciendis explicabo animi omnis minus nobis ex,
+                      magnam, tenetur quas repudiandae magni vitae quia ducimus
+                      cum nihil perferendis qui quaerat amet. Tempora natus sed
+                      hic labore atque asperiores assumenda cumque dolorem enim
+                      nobis eum vero earum, dolor molestias amet, culpa
+                      perferendis debitis. Blanditiis non ratione molestiae,
+                      iusto tenetur animi natus ut nisi expedita facilis
+                      asperiores reiciendis delectus minima doloremque
+                      architecto ipsum, voluptas placeat! Itaque enim
+                      perspiciatis provident. Eaque numquam sequi impedit odio
+                      laudantium deleniti voluptates! Accusamus nulla minima
+                      dolores dicta officiis possimus natus dolorum dolore
+                      perspiciatis delectus? Nostrum esse praesentium numquam
+                      excepturi saepe cum voluptates velit doloremque labore ut.
+                      Velit modi eos facilis vitae laborum dicta quis nam beatae
+                      voluptate. Explicabo quis corrupti labore sit sapiente
+                      debitis nobis neque, recusandae possimus magni amet veniam
+                      similique facere qui. Commodi magni dolor asperiores
+                      officiis. Sed, deserunt consectetur! Similique ratione
+                      totam libero. Mollitia molestias aliquid qui eveniet
+                      similique iusto maiores voluptatum architecto obcaecati
+                      voluptates dolor quis fuga tenetur culpa laboriosam earum
+                      repudiandae veniam, ratione officiis voluptatibus. Vitae,
+                      beatae! Dolor sit quod obcaecati quaerat debitis. Tempora
+                      atque doloribus, pariatur, sed quia inventore adipisci
+                      perferendis excepturi autem nihil quibusdam ad aut
+                      assumenda cupiditate quae eum. Magni, fugiat. Maiores eum
+                      tempore, cum sed provident optio unde cumque nemo, sint
+                      exercitationem nesciunt recusandae! Corrupti impedit
+                      temporibus, deleniti alias labore ipsam praesentium
+                      sapiente laborum voluptates suscipit dolorum tempore
+                      aspernatur placeat porro, dignissimos, optio repudiandae
+                      consequatur odio beatae aperiam itaque nostrum cupiditate
+                      rerum. Ullam minus reiciendis velit sunt est! Iste
+                      reprehenderit eius tenetur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const modal = document.getElementById("modal-x");
+              const openModal = document.getElementById("openModal");
+              const closeModal = document.querySelector(".close-modal");
+
+              openModal.addEventListener("click", function (event) {
+                event.preventDefault();
+                modal.style.display = "flex";
+              });
+
+              closeModal.addEventListener("click", function () {
+                modal.style.display = "none";
+              });
+
+              // Close modal if clicking outside the modal content
+              window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                  modal.style.display = "none";
+                }
+              });
+            });
+          </script>
 
           <div class="experience-line"></div>
 
