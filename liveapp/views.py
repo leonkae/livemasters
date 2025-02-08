@@ -7,10 +7,12 @@ class HomeView(ListView):
     template_name = "liveappTemp/index.html"
     
     def get(self, request):
-        blogs = BlogPost.objects.all()
+        posts = BlogPost.objects.all()
+        latest_post = BlogPost.objects.order_by('-created_at').first()
         
         context = {
-            'blogs':blogs
+            'posts':posts,
+            'latest_post':latest_post
         }
         
         return render(request, self.template_name,context)
