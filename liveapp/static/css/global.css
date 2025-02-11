@@ -921,3 +921,12 @@
   padding-right: 20px;
   text-align: start;
 }
+.inner-modal-x-caption{
+  display: flex;
+  gap: 15px;
+}
+.inner-modal-x-caption img{
+  height: 300px;
+  width: 450px;
+  object-fit: cover;
+}
