@@ -6,7 +6,7 @@
   font-family: "Oxanium", serif;
 }
 :root {
-  --primary-color-red: #ca0000;
+  --primary-color-red: #eb1c24;
   --primary-color-dark: #0d0d0d;
 }
 ::-webkit-scrollbar {
@@ -253,14 +253,21 @@
   color: #fff;
   width: 100%;
 }
-/* .main-post__content_left {
+.main-post__content_left {
   border: 3px solid red;
   position: absolute;
   top: 40%;
+  height: 200px;
+  width: 250px;
   right: 7.5%;
   transform: translateY(-40%);
-  width: 30%;
-} */
+}
+.main-post__content_left img{
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
 .main-post__tag-wrapper {
   margin-bottom: 1rem;
   display: inline-flex;
