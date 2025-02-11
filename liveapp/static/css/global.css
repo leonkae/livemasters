@@ -862,7 +862,7 @@
   cursor: pointer;
   color: var(--primary-color-red);
 }
-.inner-modal-x-title{
+.inner-modal-x-title {
   position: absolute;
   top: 0px;
   height: 100%;
@@ -873,7 +873,7 @@
   font-size: x-large;
   text-align: start;
 }
-.inner-modal-bottom-left{
+.inner-modal-bottom-left {
   position: absolute;
   bottom: 30px;
   left: 30px;
@@ -892,7 +892,9 @@
   object-fit: cover;
   object-position: center;
 }
-.read-more-btn, .go-back-btn {
+.next-btn,
+.read-more-btn,
+.go-back-btn {
   background-color: var(--primary-color-red);
   color: white;
   border: none;
@@ -901,7 +903,9 @@
   transition: background-color 0.3s;
   width: 200px;
 }
-.read-more-btn:hover, .go-back-btn:hover {
+.next-btn:hover,
+.read-more-btn:hover,
+.go-back-btn:hover {
   background-color: var(--primary-color-dark);
 }
 .modal-first-view {
@@ -913,20 +917,38 @@
 .modal-second-view {
   display: none;
   color: white;
-  height: 60vh;
+  height: 100vh;
   transition: opacity 0.3s ease-in-out;
-  margin-top: 2rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  padding-right: 20px;
+  overflow: hidden;
   text-align: start;
+  position: relative;
 }
-.inner-modal-x-caption{
+.inner-modal-x-caption {
   display: flex;
   gap: 15px;
 }
-.inner-modal-x-caption img{
+.inner-modal-x-caption p {
+  font-size: large;
+  width: 600px;
+  border: 1px solid var(--primary-color-red);
+  padding: 30px;
+}
+.inner-modal-x-caption img {
   height: 300px;
   width: 450px;
   object-fit: cover;
 }
+.modal-page {
+  display: none;
+  padding: 10px;
+}
+.modal-page.active {
+  display: block;
+}
+.modal-nav-view {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px;
+}
+
