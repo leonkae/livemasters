@@ -37,8 +37,11 @@
               <div class="experience-button-skew"></div>
             </div>
           </div>
-
-          <div id="modal-x" class="modal-x">
+          <div
+            id="modal-x-{{ latest_post.id }}"
+            class="modal-x"
+            data-content="{{ latest_post.content|linebreaksbr }}"
+          >
             <div class="modal-x-content">
               <span class="close-modal">CLOSE</span>
 
@@ -55,56 +58,127 @@
                 </div>
               </div>
 
-              <!-- Second View (Content) -->
+              <!-- Second View (Content with Pagination) -->
               <div class="modal-second-view">
                 <div class="inner-modal-x-caption">
-                  <p>{{ latest_post.content|linebreaksbr }}</p>
+                  <div class="modal-content-text"></div>
+                  <!-- Placeholder for paginated content -->
                 </div>
-
-                <button class="go-back-btn">Go Back</button>
+                <div class="modal-nav-view">
+                  <button class="go-back-btn">Go Back</button>
+                  <button class="next-btn">Next Page</button>
+                </div>
               </div>
             </div>
           </div>
 
           <script>
             document.addEventListener("DOMContentLoaded", function () {
-              const modal = document.getElementById("modal-x");
+              const modal = document.getElementById(
+                "modal-x-{{ latest_post.id }}"
+              );
               const openModal = document.getElementById("openModal");
-              const closeModal = document.querySelector(".close-modal");
-              const readMoreButton = document.querySelector(".read-more-btn");
-              const goBackButton = document.querySelector(".go-back-btn");
-              const firstView = document.querySelector(".modal-first-view");
-              const secondView = document.querySelector(".modal-second-view");
+              const closeModal = modal.querySelector(".close-modal");
+              const readMoreButton = modal.querySelector(".read-more-btn");
+              const goBackButton = modal.querySelector(".go-back-btn");
+              const firstView = modal.querySelector(".modal-first-view");
+              const secondView = modal.querySelector(".modal-second-view");
+              const modalContentDiv = modal.querySelector(
+                ".modal-content-text"
+              );
+              const nextButton = modal.querySelector(".next-btn");
 
-              // Open modal
               openModal.addEventListener("click", function (event) {
                 event.preventDefault();
                 modal.style.display = "flex";
+                const content = decodeContent(
+                  modal.getAttribute("data-content")
+                );
+                paginateContent(content);
               });
 
-              // Close modal
               closeModal.addEventListener("click", function () {
                 modal.style.display = "none";
               });
 
-              // Close modal if clicking outside the modal content
               window.addEventListener("click", function (event) {
                 if (event.target === modal) {
                   modal.style.display = "none";
                 }
               });
 
-              // Read More button - Show content, hide image and title
               readMoreButton.addEventListener("click", function () {
                 firstView.style.display = "none";
                 secondView.style.display = "block";
               });
 
-              // Go Back button - Show image and title, hide content
               goBackButton.addEventListener("click", function () {
                 secondView.style.display = "none";
                 firstView.style.display = "flex";
               });
+
+              function decodeContent(content) {
+                return content.replace(
+                  /\\u([0-9A-Fa-f]{4})/g,
+                  function (match, group) {
+                    return String.fromCharCode(parseInt(group, 16));
+                  }
+                );
+              }
+
+              function paginateContent(fullText) {
+                modalContentDiv.innerHTML = "";
+                const words = fullText.split(" ");
+                let pages = [];
+                let currentPageText = "";
+                const maxWordsPerPage = 50;
+
+                for (let i = 0; i < words.length; i++) {
+                  currentPageText += words[i] + " ";
+                  if (
+                    (i + 1) % maxWordsPerPage === 0 ||
+                    i === words.length - 1
+                  ) {
+                    const page = document.createElement("div");
+                    page.classList.add("modal-page");
+                    page.innerHTML = `<p>${currentPageText.trim()}</p>`;
+                    if (pages.length === 0) {
+                      page.classList.add("active");
+                    }
+                    pages.push(page);
+                    currentPageText = "";
+                  }
+                }
+                pages.forEach((page) => modalContentDiv.appendChild(page));
+                addNavigation(pages);
+              }
+
+              function addNavigation(pages) {
+                let currentIndex = 0;
+                function updateView() {
+                  pages.forEach((page, index) => {
+                    page.style.display =
+                      index === currentIndex ? "block" : "none";
+                  });
+                  goBackButton.style.display =
+                    currentIndex === 0 ? "none" : "block";
+                  nextButton.style.display =
+                    currentIndex === pages.length - 1 ? "none" : "block";
+                }
+                nextButton.onclick = function () {
+                  if (currentIndex < pages.length - 1) {
+                    currentIndex++;
+                    updateView();
+                  }
+                };
+                goBackButton.onclick = function () {
+                  if (currentIndex > 0) {
+                    currentIndex--;
+                    updateView();
+                  }
+                };
+                updateView();
+              }
             });
           </script>
 
