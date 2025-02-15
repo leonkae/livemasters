@@ -33,12 +33,66 @@
   width: 100%;
   display: flex;
 }
+@media screen and (max-width: 1700px) {
+  .navbar-wrapper {
+    display: none;
+  }
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+.mobile-navbar-wrapper {
+  background-color: var(--primary-color-dark);
+  padding: 10px;
+  display: none;
+}
+@media screen and (max-width: 1700px) {
+  .mobile-navbar-wrapper {
+    display: block;
+  }
+}
 .inner-navbar-wrapper {
   background-color: var(--primary-color-red);
   width: 40%;
   height: 70px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
+
 .navbar-skew {
   transform: skewX(-48deg);
   width: 30px;

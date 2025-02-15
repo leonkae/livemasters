@@ -1,17 +1,41 @@
 {% extends '../base/base.html' %}{% load static %}{% block navbar %}
 
+<div class="mobile-navbar-wrapper">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+      >&times;</a
+    >
+    <a href="#landing">Home</a>
+    <a href="">Services</a>
+    <a href="#process">The Process</a>
+    <a href="#mastersep">The Experience</a>
+    <a href="#magazine">The Magazine</a>
+  </div>
+  <span style="font-size: 18px; color:white; cursor: pointer" onclick="openNav()"
+    >Menu</span
+  >
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</div>
+
 <div class="navbar-wrapper">
   <div class="inner-navbar-wrapper">
     <div class="inner-nav-wrapper">
       <div class="logo-navbar">
-        <img src="{% static 'images/red-logo.jpeg' %}" alt="">
+        <img src="{% static 'images/red-logo.jpeg' %}" alt="" />
       </div>
-        <a href="#landing">Home</a>
-        <a href="">Services</a>
-        <a href="#process">The Process</a>
-        <a href="#mastersep">The Experience</a>
-        <a href="#magazine">The Magazine</a>
-       
+      <a href="#landing">Home</a>
+      <a href="">Services</a>
+      <a href="#process">The Process</a>
+      <a href="#mastersep">The Experience</a>
+      <a href="#magazine">The Magazine</a>
     </div>
   </div>
   <div class="navbar-skew"></div>
