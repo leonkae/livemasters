@@ -389,6 +389,11 @@
 .main-post__link-text {
   font-size: 0.9em;
 }
+.main-post__link-text a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
 .main-post__link-icon--arrow {
   margin-left: 12px;
 }
