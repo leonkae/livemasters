@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-xpet6^!_%qnkaa9s1z8@tz40i*)@gy&*0g=jwwq2rn71$7%#+5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ["www.livemasters.co.ke", "livemasters.co.ke"]
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.livemasters.co.ke", "livemasters.co.ke", "*"]
 
 # Application definition
 
