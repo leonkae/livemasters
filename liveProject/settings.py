@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-xpet6^!_%qnkaa9s1z8@tz40i*)@gy&*0g=jwwq2rn71$7%#+5
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = ["www.livemasters.co.ke", "livemasters.co.ke"]
 
 # Application definition
 
@@ -118,9 +118,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'staticfiles'
 ]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "static"
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
