@@ -76,6 +76,21 @@
     font-size: 18px;
   }
 }
+.logo-navbar-five{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-navbar-mobile{
+  height: 40px;
+  width: 80px;
+}
+.logo-navbar-mobile img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 .mobile-navbar-wrapper {
   background-color: var(--primary-color-dark);
   padding: 10px;
@@ -244,12 +259,12 @@
   transform-origin: 0 0;
 }
 .carousel {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
 }
 @media screen and (max-width: 1000px) {
   .carousel {
-   height: 200vh;
+   height: 110vh;
    overflow: hidden;
   }
 }
@@ -374,7 +389,7 @@
 }
 @media screen and (max-width: 1000px) {
   .main-post__title {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 500;
   }
 }
@@ -479,6 +494,7 @@
 @media screen and (max-width: 1000px) {
   .post__title {
     font-size: 1em;
+    display: none;
   }
 }
 .post--active {

@@ -11,9 +11,17 @@
     <a href="#mastersep">The Experience</a>
     <a href="#magazine">The Magazine</a>
   </div>
-  <span style="font-size: 18px; color:white; cursor: pointer" onclick="openNav()"
-    >Menu</span
-  >
+  <div class="logo-navbar-five">
+    <span
+      style="font-size: 18px; color: white; cursor: pointer"
+      onclick="openNav()"
+      >Menu</span
+    >
+    <div class="logo-navbar-mobile">
+      <img src="{% static 'images/red-logo.jpeg' %}" alt="" />
+    </div>
+  </div>
+
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
