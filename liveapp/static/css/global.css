@@ -38,6 +38,21 @@
     display: none;
   }
 }
+.contact-info-x {
+  position: absolute; /* Place at the bottom */
+  bottom: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  width: 100%; /* Take full width */
+  text-align: start; /* Center the links */
+}
+.contact-info-x a {
+  display: block;
+  color: #818181; /* Adjust color as needed */
+  text-decoration: none;
+}
+.contact-info-x a:hover {
+  color: #f1f1f1; /* Adjust hover color as needed */
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -45,13 +60,13 @@
   z-index: 10000;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--primary-color-dark);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 10px;
   text-decoration: none;
   font-size: 18px;
   color: white;
