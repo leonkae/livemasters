@@ -1326,10 +1326,29 @@
   height: 100%;
   position: relative;
 }
-
 .arrow-item {
   width: 20px;
   height: 100%;
   clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
   background-color: var(--primary-color-red);
+}
+.client-item-wrapper-x{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.client-item-wrapper-x a{
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.client-item-wrapper-x a:hover{
+  color: var(--primary-color-red);
+  font-size: larger;
+}
+.client-item-wrapper-x p{
+  font-size: large;
+  color: white;
 }
