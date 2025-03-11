@@ -1205,11 +1205,13 @@
   padding: 10px;
 }
 .process-wrapper {
-  height: 100vh;
+  height: 100%;
   background-color: var(--primary-color-dark);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 @media screen and (max-width: 1000px) {
   .process-wrapper {
@@ -1292,9 +1294,7 @@
   font-size: larger;
 }
 .item-process-scroll {
-  height: 70vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  height: 100%;
 }
 @media screen and (max-width: 1000px) {
   .item-process-scroll {
