@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /search/
+
+Sitemap: https://www.livemasters.co.ke/sitemap.xml

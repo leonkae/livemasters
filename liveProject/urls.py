@@ -18,10 +18,26 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+from django.contrib.sitemaps.views import index, sitemap
+from liveapp.sitemaps import StaticViewSitemap  # Import your sitemap class
+
+def robots_txt(request):
+    content = render_to_string('robots.txt')
+    return HttpResponse(content, content_type='text/plain')
+
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 urlpatterns = [
-    path('',include('liveapp.urls')),
+    path('', include('liveapp.urls')),
     path('admin/', admin.site.urls),
+    path('robots.txt', robots_txt),
+    path('sitemap.xml', index, {'sitemaps': sitemaps}),
+    path('sitemap-<section>.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
+
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
