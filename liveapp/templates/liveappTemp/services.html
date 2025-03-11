@@ -1,0 +1,48 @@
+{% extends "../base/base.html" %}{% load static %}{% block services %}
+
+<div class="services-wrapper">
+  <div class="services-title-now">
+    <div class="inner-story-title">
+      <h1>OUR SERVICES</h1>
+      <div class="slice-line-x"></div>
+    </div>
+  </div>
+
+  <div class="services-hero">
+    <div class="box-1-services">
+      <img src="{% static 'images/video-coverage-two.jpeg' %}" alt="" />
+      <div class="box-1-services-content">
+        <div class="inner-services-box">
+          <div class="inner-services-content">
+            <h1>Live Streaming</h1>
+            <div class="slice-line-x"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-1-services">
+      <img src="{% static 'images/live-coverage-two.jpeg' %}" alt="" />
+      <div class="box-1-services-content">
+        <div class="inner-services-box">
+          <div class="inner-services-content">
+            <h1>Video Coverage</h1>
+            <div class="slice-line-x"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-1-services">
+      <img src="{% static 'images/polka.jpeg' %}" alt="" />
+      <div class="box-1-services-content">
+        <div class="inner-services-box">
+          <div class="inner-services-content">
+            <h1>Documentary/ Digital content production</h1>
+            <div class="slice-line-x"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
