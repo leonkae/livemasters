@@ -12,6 +12,12 @@
         <div class="row">
           <div class="col-lg-6 p-1">
             <div class="client-form">
+              {% if messages %}
+                {% for message in messages %}
+                <p {% if message.tags %} style="color: greenyellow;" class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+               {% endfor %}
+              {% endif %}
+      
               <form method="post" action="">
                 {% csrf_token %}
                 <input type="text" id="name" placeholder="Name" name="name" required /><br /><br />
