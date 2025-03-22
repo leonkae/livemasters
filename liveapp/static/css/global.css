@@ -118,13 +118,12 @@
 }
 .inner-navbar-wrapper {
   background-color: var(--primary-color-red);
-  width: 40%;
+  width: 50%;
   height: 70px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
-
 .navbar-skew {
-  transform: skewX(-48deg);
+  transform: skewX(-53deg);
   width: 30px;
   background-color: var(--primary-color-red);
 }
@@ -998,7 +997,7 @@
 .footer-wrapper {
   padding-top: 3%;
   padding-bottom: 3%;
-  background-color: #141414;
+  background-color: var(--primary-color-dark);
   display: flex;
   align-items: center;
   justify-content: center;
