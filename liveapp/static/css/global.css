@@ -558,6 +558,8 @@
 .services-hero {
   display: flex;
   margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 1000px) {
   .services-hero{
@@ -567,10 +569,17 @@
   }
 }
 .box-1-services {
-  width: 320px;
-  height: 250px;
-  margin-right: 10px;
+  width: 400px;
+  height: 350px;
   position: relative;
+}
+.box-mega-space{
+  border: 3px solid rgba(255, 0, 0, 0);
+}
+@media screen and (max-width: 1000px) {
+  .box-mega-space {
+    display: none;
+  }
 }
 @media screen and (max-width: 1000px) {
   .box-1-services {
@@ -811,6 +820,9 @@
   background-color: #0000002c;
   display: flex;
   align-items: end;
+}
+.modal-content-services h2{
+  font-size: larger;
 }
 .experience-content h1 {
   color: white;
@@ -1401,4 +1413,16 @@
   font-size: larger;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
-
+.modal-services-x{
+  border: 1px solid var(--primary-color-red);
+  width: 80%;
+  background-color: var(--primary-color-dark);
+  margin: 10px;
+  color: white;
+  padding: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .modal-services-x {
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 {% extends "../base/base.html" %}{% load static %}{% block services %}
 
-<div class="services-wrapper" id="services" >
+<div class="services-wrapper" id="services">
   <div class="services-title-now">
     <div class="inner-story-title">
       <h1>OUR SERVICES</h1>
@@ -16,10 +16,17 @@
           <div class="inner-services-content">
             <h1>Live Streaming</h1>
             <div class="slice-line-x"></div>
+            <div class="experience-button">
+              <div class="acct-experience-button">
+                <button class="live-streaming-modal-button">Learn More</button>
+              </div>
+              <div class="experience-button-skew"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="box-mega-space"></div>
     <div class="box-1-services">
       <img src="{% static 'images/live-coverage-two.jpeg' %}" alt="" />
       <div class="box-1-services-content">
@@ -27,10 +34,18 @@
           <div class="inner-services-content">
             <h1>Video Coverage</h1>
             <div class="slice-line-x"></div>
+
+            <div class="experience-button">
+              <div class="acct-experience-button">
+                <button class="video-coverage-modal-button">Learn More</button>
+              </div>
+              <div class="experience-button-skew"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="box-mega-space"></div>
     <div class="box-1-services">
       <img src="{% static 'images/polka.jpeg' %}" alt="" />
       <div class="box-1-services-content">
@@ -38,11 +53,144 @@
           <div class="inner-services-content">
             <h1>Documentary/ Digital content production</h1>
             <div class="slice-line-x"></div>
+            <div class="experience-button">
+              <div class="acct-experience-button">
+                <button class="documentary-modal-button">Learn More</button>
+              </div>
+              <div class="experience-button-skew"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div id="live-streaming-modal" class="modal-services-x" style="display: none;">
+    <div class="modal-content-services">
+      <span class="close-live-streaming">Close</span>
+      <h2>Live Streaming</h2>
+      <p>
+        <strong>Live Masters – Best Livestreaming Services in Kenya!</strong><br />
+        Looking for reliable livestreaming services in Kenya? At Live Masters,
+        we provide seamless, high-quality live broadcasts for corporate events,
+        NGO projects, webinars, conferences, and more—ensuring your audience
+        stays connected, anytime, anywhere.<br /><br />
+        ✅ HD & 4K Livestreaming for Crystal-Clear Video<br />
+        ✅ Multi-Platform Streaming (Facebook, YouTube, Zoom, Instagram &
+        More)<br />
+        ✅ Reliable, Lag-Free, and Professionally Managed Livestreams<br />
+        ✅ Trusted by Leading Corporates & NGOs Across Kenya<br /><br />
+        Whether you're hosting a virtual conference in Nairobi, a corporate AGM
+        in Mombasa, or a live sports event in Kisumu, we ensure a flawless and
+        engaging livestream experience.<br /><br />
+        📞 Book Kenya’s #1 Livestreaming Experts Today!<br />
+        🌍 Serving Nairobi, Mombasa, Kisumu, Nakuru & Beyond!<br />
+        #LiveMasters #LivestreamingKenya #LiveEventCoverage #CorporateStreaming
+        #SeamlessStreaming
+      </p>
+    </div>
+  </div>
+
+  <div id="video-coverage-modal" class="modal-services-x" style="display: none;">
+    <div class="modal-content-services">
+      <span class="close-video-coverage">Close</span>
+      <h2>Video Coverage</h2>
+      <p>
+        <strong>Live Masters – The Best Video Coverage Solutions in Kenya!</strong><br />
+        Looking for professional video coverage in Kenya? Whether it’s a
+        corporate event, NGO project, conference, or live stream, Live Masters
+        delivers high-quality video production with precision and creativity.<br /><br />
+        ✅ HD & 4K Video Coverage<br />
+        ✅ Seamless Livestreaming Services<br />
+        ✅ Expert Event Filming & Editing<br /><br />
+        We ensure crystal-clear visuals and smooth streaming for all your
+        events. Trust Live Masters for top-notch video solutions that capture
+        every moment perfectly!<br /><br />
+        📞 Book us today! #LiveMasters #VideoCoverageKenya #LivestreamingKenya
+        #EventCoverage
+      </p>
+    </div>
+  </div>
+
+  <div id="documentary-modal" class="modal-services-x" style="display: none;">
+    <div class="modal-content-services">
+      <span class="close-documentary">Close</span>
+      <h2>Documentary/ Digital content production</h2>
+      <p>
+        <strong>Live Masters – Expert Documentary & Digital Content Production in Kenya!</strong><br />
+        Looking for top-tier documentary and digital content production in
+        Kenya? At Live Masters, we craft compelling stories that captivate,
+        inform, and inspire. From NGO impact stories to corporate brand
+        storytelling, we deliver high-quality content tailored to your needs.<br /><br />
+        ✅ Professional Documentary Filmmaking<br />
+        ✅ Branded Digital Content Creation<br />
+        ✅ Cinematic Storytelling & High-Quality Editing<br /><br />
+        Let us bring your vision to life with engaging, visually stunning, and
+        impactful content. Partner with Live Masters for world-class digital
+        production!<br /><br />
+        📞 Let’s create together! #LiveMasters #DocumentaryProduction
+        #DigitalContentKenya #Storytelling
+      </p>
+    </div>
+  </div>
 </div>
 
+<script>
+  const liveStreamingModal = document.getElementById("live-streaming-modal");
+  const videoCoverageModal = document.getElementById("video-coverage-modal");
+  const documentaryModal = document.getElementById("documentary-modal");
+
+  const liveStreamingButton = document.querySelector(".live-streaming-modal-button");
+  const videoCoverageButton = document.querySelector(".video-coverage-modal-button");
+  const documentaryButton = document.querySelector(".documentary-modal-button");
+
+  const closeLiveStreaming = document.querySelector(".close-live-streaming");
+  const closeVideoCoverage = document.querySelector(".close-video-coverage");
+  const closeDocumentary = document.querySelector(".close-documentary");
+
+  function hideAllModals() {
+    liveStreamingModal.style.display = "none";
+    videoCoverageModal.style.display = "none";
+    documentaryModal.style.display = "none";
+  }
+
+  liveStreamingButton.onclick = function () {
+    hideAllModals();
+    liveStreamingModal.style.display = "block";
+  };
+
+  videoCoverageButton.onclick = function () {
+    hideAllModals();
+    videoCoverageModal.style.display = "block";
+  };
+
+  documentaryButton.onclick = function () {
+    hideAllModals();
+    documentaryModal.style.display = "block";
+  };
+
+  closeLiveStreaming.onclick = function () {
+    liveStreamingModal.style.display = "none";
+  };
+
+  closeVideoCoverage.onclick = function () {
+    videoCoverageModal.style.display = "none";
+  };
+
+  closeDocumentary.onclick = function () {
+    documentaryModal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == liveStreamingModal) {
+      liveStreamingModal.style.display = "none";
+    }
+    if (event.target == videoCoverageModal) {
+      videoCoverageModal.style.display = "none";
+    }
+    if (event.target == documentaryModal) {
+      documentaryModal.style.display = "none";
+    }
+  };
+</script>
 {% endblock %}
