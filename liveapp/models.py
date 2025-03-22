@@ -6,9 +6,6 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=450)
     content = models.TextField()
     image = models.ImageField(upload_to="images/")
-    image_two = models.ImageField(upload_to="images/")
-    image_three = models.ImageField(upload_to="images/")
-    image_four = models.ImageField(upload_to="images/")
     created_at = models.DateTimeField(auto_now_add=True)  
     
     def __str__(self):
