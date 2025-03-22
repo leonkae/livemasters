@@ -1386,3 +1386,20 @@
   background-color: rgba(73, 73, 73, 0);
   color: white;
 }
+.acct-experience-button button{
+  border: none;
+  background-color: #0d0d0d00;
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-weight: 500;
+  transition: color 0.3s ease, font-size 0.3s ease, text-shadow 0.3s ease;
+}
+.acct-experience-button button:hover{
+  border: none;
+  background-color: #0d0d0d00;
+  color: black;
+  font-size: larger;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+

@@ -14,18 +14,17 @@
             <div class="client-form">
               <form method="post" action="">
                 {% csrf_token %}
-                <input type="text" id="name" placeholder="Name" name="name" /><br /><br />
-                <input type="email" id="email" placeholder="Email" name="email" /><br /><br />
-                <input type="text" id="subject" placeholder="Subject" name="subject" /><br /><br />
-                <textarea id="message" placeholder="how can we help you?" name="message"></textarea><br /><br />
-                <!-- <input type="submit" value="Submit" /> -->
+                <input type="text" id="name" placeholder="Name" name="name" required /><br /><br />
+                <input type="email" id="email" placeholder="Email" name="email" required /><br /><br />
+                <input type="text" id="subject" placeholder="Subject" name="subject" required /><br /><br />
+                <textarea id="message" placeholder="How can we help you?" name="message" required></textarea><br /><br />
                 <div class="experience-button">
-                  <div class="acct-experience-button">
-                    <a href="#" class="submit-button" onclick="this.parentNode.submit(); return false;">Submit</a>
-                  </div>
-                  <div class="experience-button-skew"></div>
+                    <div class="acct-experience-button">
+                        <button type="submit" class="submit-button">Submit</button>
+                    </div>
+                    <div class="experience-button-skew"></div>
                 </div>
-              </form>
+            </form>
             </div>
           </div>
           <div class="col-lg-6 p-1">
