@@ -334,6 +334,12 @@
   object-fit: cover;
   object-position: right;
 }
+@media screen and (max-width: 1000px) {
+  .main-post__post {
+   border: 3px solid red;
+  }
+}
+
 .main-post__image::before {
   content: "";
   display: block;
