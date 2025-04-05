@@ -353,15 +353,23 @@
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+}
+@media screen and (max-width: 1000px) {
+  .main-post__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+  }
 }
 @media screen and (max-width: 1000px) {
   .main-post__post {
    border: 3px solid red;
   }
 }
-
 .main-post__image::before {
   content: "";
   display: block;
@@ -1443,7 +1451,7 @@
 }
 .modal-services-x{
   border: 1px solid var(--primary-color-red);
-  width: 80%;
+  width: 600px;
   background-color: var(--primary-color-dark);
   margin: 10px;
   color: white;

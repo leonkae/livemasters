@@ -136,61 +136,67 @@
 </div>
 
 <script>
-  const liveStreamingModal = document.getElementById("live-streaming-modal");
-  const videoCoverageModal = document.getElementById("video-coverage-modal");
-  const documentaryModal = document.getElementById("documentary-modal");
+  const modals = {
+    live: document.getElementById("live-streaming-modal"),
+    video: document.getElementById("video-coverage-modal"),
+    doc: document.getElementById("documentary-modal")
+  };
 
-  const liveStreamingButton = document.querySelector(".live-streaming-modal-button");
-  const videoCoverageButton = document.querySelector(".video-coverage-modal-button");
-  const documentaryButton = document.querySelector(".documentary-modal-button");
+  const buttons = {
+    live: document.querySelector(".live-streaming-modal-button"),
+    video: document.querySelector(".video-coverage-modal-button"),
+    doc: document.querySelector(".documentary-modal-button")
+  };
 
-  const closeLiveStreaming = document.querySelector(".close-live-streaming");
-  const closeVideoCoverage = document.querySelector(".close-video-coverage");
-  const closeDocumentary = document.querySelector(".close-documentary");
+  const closes = {
+    live: document.querySelector(".close-live-streaming"),
+    video: document.querySelector(".close-video-coverage"),
+    doc: document.querySelector(".close-documentary")
+  };
+
+  // Track the currently active box
+  let currentlyHiddenBox = null;
 
   function hideAllModals() {
-    liveStreamingModal.style.display = "none";
-    videoCoverageModal.style.display = "none";
-    documentaryModal.style.display = "none";
+    Object.values(modals).forEach(modal => {
+      modal.style.display = "none";
+      modal.parentNode && modal.parentNode.removeChild(modal);
+    });
+
+    // Restore hidden box if any
+    if (currentlyHiddenBox) {
+      currentlyHiddenBox.style.display = "block";
+      currentlyHiddenBox = null;
+    }
   }
 
-  liveStreamingButton.onclick = function () {
+  function showModal(modal, button) {
     hideAllModals();
-    liveStreamingModal.style.display = "block";
-  };
 
-  videoCoverageButton.onclick = function () {
-    hideAllModals();
-    videoCoverageModal.style.display = "block";
-  };
+    const box = button.closest(".box-1-services");
+    currentlyHiddenBox = box;
+    box.style.display = "none";
 
-  documentaryButton.onclick = function () {
-    hideAllModals();
-    documentaryModal.style.display = "block";
-  };
+    box.insertAdjacentElement("afterend", modal);
+    modal.style.display = "block";
+  }
 
-  closeLiveStreaming.onclick = function () {
-    liveStreamingModal.style.display = "none";
-  };
+  buttons.live.onclick = () => showModal(modals.live, buttons.live);
+  buttons.video.onclick = () => showModal(modals.video, buttons.video);
+  buttons.doc.onclick = () => showModal(modals.doc, buttons.doc);
 
-  closeVideoCoverage.onclick = function () {
-    videoCoverageModal.style.display = "none";
-  };
-
-  closeDocumentary.onclick = function () {
-    documentaryModal.style.display = "none";
-  };
+  closes.live.onclick = () => hideAllModals();
+  closes.video.onclick = () => hideAllModals();
+  closes.doc.onclick = () => hideAllModals();
 
   window.onclick = function (event) {
-    if (event.target == liveStreamingModal) {
-      liveStreamingModal.style.display = "none";
-    }
-    if (event.target == videoCoverageModal) {
-      videoCoverageModal.style.display = "none";
-    }
-    if (event.target == documentaryModal) {
-      documentaryModal.style.display = "none";
-    }
+    Object.values(modals).forEach(modal => {
+      if (event.target === modal) {
+        hideAllModals();
+      }
+    });
   };
 </script>
+
+
 {% endblock %}
