@@ -1,0 +1,373 @@
+{% extends "../base/base.html" %}{% load static %}{% block newServices %}
+<div class="new-services-wrapper" id="services">
+  <div class="inner-process-wrapper">
+    <div class="inner-story-title">
+      <h1>THE PROCESS</h1>
+      <div class="slice-line-x"></div>
+    </div>
+    <div class="main-image-container" id="image-display-area">
+      <div
+        class="image-item-wrapper"
+        id="image-one-wrapper"
+        data-linked-content="content-area-one"
+      >
+        <img src="{% static 'images/cop.jpeg' %}" alt="Image One" />
+        <button class="view-image-content-button" id="view-content-one">
+          The story telling process
+        </button>
+      </div>
+      <div
+        class="image-item-wrapper-x"
+        id="image-two-wrapper"
+        data-linked-content="content-area-two"
+      >
+        <img src="{% static 'images/production-live.jpeg' %}" alt="Image One" />
+        <button class="view-image-content-button" id="view-content-two">
+          The live streaming process
+        </button>
+      </div>
+    </div>
+
+    <div class="content-display-area" id="content-area-one">
+      <div class="content-display-area-inner">
+        <div class="story-wrapper" id="story-two">
+          <div class="left-story-side">
+            <img src="{% static 'images/man.jpeg' %}" alt="Man" />
+          </div>
+          <div class="inner-story-wrapper">
+            <div class="wrapper-story-inner">
+              <div class="title-story-service-process">
+                <div class="inner-story-title">
+                  <h1>
+                    THE <br />
+                    STORY TELLING PROCESS
+                  </h1>
+                </div>
+                <div class="slice-line-x"></div>
+              </div>
+
+              <div class="story-content">
+                <div class="inner-story-content">
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>1</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img
+                            src="{% static 'images/cynton.jpg' %}"
+                            alt="Cynton image"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>Consulting and planning</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            This is where we connect with clients to deeply
+                            understand their requirements and objectives. At
+                            LiveMasters, we prioritize understanding the people,
+                            context, and unique intersectionality of each
+                            client’s story, ensuring every narrative is
+                            authentic and impactful.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>2</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img
+                            src="{% static 'images/cop.jpeg' %}"
+                            alt="Copperative image"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>Pre - Production</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            This stage focuses on crafting a detailed production
+                            plan, covering every aspect—from scripting and
+                            scheduling to equipment needs, logistics, permits,
+                            and talent casting (if required). At LiveMasters, we
+                            ensure every detail is meticulously planned for
+                            seamless execution.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>3</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img
+                            src="{% static 'images/family-bank.jpeg' %}"
+                            alt="Fam bank"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>Production</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            This is where we connect with clients to deeply
+                            understand their requirements and objectives. At
+                            LiveMasters, we prioritize understanding the people,
+                            context, and unique intersectionality of each
+                            client’s story, ensuring every narrative is
+                            authentic and impactful.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>4</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img src="{% static 'images/man.jpeg' %}" alt="Man" />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>Post - Production</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            This is where we connect with clients to deeply
+                            understand their requirements and objectives. At
+                            LiveMasters, we prioritize understanding the people,
+                            context, and unique intersectionality of each
+                            client’s story, ensuring every narrative is
+                            authentic and impactful.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="return-to-images-button" id="back-to-images-one">
+                Back to Images
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-display-area" id="content-area-two">
+      <div class="content-display-area-inner">
+        <div class="story-wrapper" id="story-two">
+          <div class="left-story-side">
+            <img src="{% static 'images/man.jpeg' %}" alt="Man" />
+          </div>
+          <div class="inner-story-wrapper">
+            <div class="wrapper-story-inner">
+              <div class="title-story-service-process">
+                <div class="inner-story-title">
+                  <h1>
+                    THE <br />
+                    LIVESTREAMING PROCESS
+                  </h1>
+                </div>
+                <div class="slice-line-x"></div>
+              </div>
+
+              <div class="story-content">
+                <div class="inner-story-content">
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>1</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img
+                            src="{% static 'images/cynton.jpg' %}"
+                            alt="Cynton image"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>Consulting and planning</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            LiveMasters begins by consulting and strategizing,
+                            defining technical requirements, and crafting a
+                            comprehensive production plan to ensure flawless
+                            live execution.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>2</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img
+                            src="{% static 'images/cop.jpeg' %}"
+                            alt="Copperative image"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>TX Setup & Reharsals</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            The team prepares by setting up livestreaming
+                            equipment and conducting thorough rehearsals,
+                            ensuring a seamless and flawless production.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>3</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img
+                            src="{% static 'images/family-bank.jpeg' %}"
+                            alt="Fam bank"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>Live Event Production</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            During the live event, LiveMasters manages the
+                            production, delivering high-quality streaming and
+                            maximizing audience engagement.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="the-story-content">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item">
+                          <div class="the-number-story">
+                            <h1>4</h1>
+                            <div class="straight-line-story"></div>
+                          </div>
+                          <img src="{% static 'images/man.jpeg' %}" alt="Man" />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="the-actual-story-item-content">
+                          <h1>Post-Production and Evaluation</h1>
+                          <div class="slice-line-x"></div>
+                          <p>
+                            After the event, LiveMasters handles
+                            post-production, evaluates the project, and
+                            integrates feedback to continuously enhance future
+                            productions.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="return-to-images-button" id="back-to-images-one">
+                Back to Images
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const imageDisplayArea = document.getElementById("image-display-area");
+    const contentAreas = document.querySelectorAll(".content-display-area");
+    const viewContentButtons = document.querySelectorAll(
+      ".view-image-content-button"
+    );
+    const returnToImagesButtons = document.querySelectorAll(
+      ".return-to-images-button"
+    );
+
+    viewContentButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const imageWrapper = this.parentNode;
+        const contentId = imageWrapper.dataset.linkedContent;
+        const targetContentArea = document.getElementById(contentId);
+
+        // Prepare image area for fade-out
+        imageDisplayArea.style.display = "flex";
+        void imageDisplayArea.offsetWidth; // Force reflow
+        imageDisplayArea.classList.add("fade-out");
+
+        setTimeout(() => {
+          imageDisplayArea.style.display = "none";
+          // Prepare content area for fade-in
+          targetContentArea.style.display = "flex";
+          void targetContentArea.offsetWidth; // Force reflow
+          targetContentArea.classList.add("fade-in");
+        }, 300); // Match transition
+      });
+    });
+
+    returnToImagesButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        contentAreas.forEach((area) => {
+          area.classList.remove("fade-in");
+          setTimeout(() => {
+            area.style.display = "none";
+          }, 300); // Match transition
+        });
+        // Prepare image area for fade-in
+        imageDisplayArea.style.display = "flex";
+        void imageDisplayArea.offsetWidth; // Force reflow
+        imageDisplayArea.classList.remove("fade-out");
+      });
+    });
+  });
+</script>
+
+{% endblock %}
